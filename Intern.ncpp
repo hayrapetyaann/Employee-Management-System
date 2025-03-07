@@ -1,0 +1,19 @@
+#include "Intern.h"
+
+Intern::Intern(int id, std::string name, double stipend)
+        : Employee(id, name, stipend, "Intern", "Active") {}
+
+
+double Intern::calculateSalary() {
+    return m_salary;
+}
+
+void Intern::promote() {
+    m_role = "Part-Time"; 
+}
+
+void Intern::performanceReview(int score) {
+    if (score >= 4) {
+        m_salary += 100;  
+    }
+}
